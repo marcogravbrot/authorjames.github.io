@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Streamline</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <style>
+    .navbar {
+        display: none;
+    }
+
+
+    /* Larger than phone */
+    @media (min-width: 550px) {
+        .header {
+            margin-top: 18rem;
+        }
+
+        .value-props {
+            margin-top: 9rem;
+            margin-bottom: 7rem;
+        }
+
+        .value-img {
+            margin-bottom: 1rem;
+        }
+
+        .example-grid .column,
+        .example-grid .columns {
+            margin-bottom: 1.5rem;
+        }
+
+        .docs-section {
+            padding: 6rem 0;
+        }
+
+        .example-send-yourself-copy {
+            float: right;
+            margin-top: 12px;
+        }
+
+        .example-screenshot-wrapper {
+            position: absolute;
+            width: 48%;
+            height: 100%;
+            left: 0;
+            max-height: none;
+        }
+    }
+
+    /* Larger than tablet */
+    @media (min-width: 750px) {
+      /* Navbar */
+    .navbar + .docs-section {
+        border-top-width: 0;
+    }
+
+    .navbar,
+    .navbar-spacer {
+        display: block;
+        width: 100%;
+        height: 6.5rem;
+        background: #fff;
+        z-index: 99;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+
+    .navbar-spacer {
+        display: none;
+    }
+
+    .navbar > .container {
+        width: 100%;
+    }
+
+    .navbar-list {
+        list-style: none;
+        margin-bottom: 0;
+    }
+
+    .navbar-item {
+        position: relative;
+        float: left;
+        margin-bottom: 0;
+    }
+
+    .navbar-link {
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: .2rem;
+        margin-right: 35px;
+        text-decoration: none;
+        line-height: 6.5rem;
+        color: #222;
+    }
+
+    .navbar-home {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: .2rem;
+        margin-right: 35px;
+        text-decoration: none;
+        line-height: 6.5rem;
+        color: #222;
+    }
+
+    .navbar-home:hover {
+      color: #222;
+    }
+
+    .navbar-link.active {
+        color: #33C3F0;
+    }
+
+    .has-docked-nav .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .has-docked-nav .navbar-spacer {
+        display: block;
+    }
+
+      /* Re-overiding the width 100% declaration to match size of % based container */
+    .has-docked-nav .navbar > .container {
+        width: 80%;
+    }
+
+    .image {
+      position: relative;
+      max-width: 80%;
+      margin: 3rem auto -12rem;
+    }
+
+    .preview {
+        padding: 8px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+        border-color: rgb(220, 220, 220);
+        border: 1px solid rgb(220, 220, 220);
+    }
+
+	.values {
+	  background-image: url('../images/values-bg.jpg');
+	  background-size: cover;
+	  color: #fff;
+	  padding-bottom: 5rem;
+	}
+	.value-multiplier {
+	  margin-bottom: .5rem;
+	  color: #11DFC7;
+	}
+	.value-heading {
+	  margin-bottom: .3rem;
+	}
+	.value-description {
+	  opacity: .8;
+	  font-weight: 300;
+	}
+
+	.section {
+	  margin-top: 0rem;
+	  padding: 7rem 0 5rem;
+	  text-align: left;
+	}
+	.section-heading,
+	.section-description {
+	  margin-bottom: 1.2rem;
+	}
+
+	.categories {
+	  background-size: cover;
+	  color: #222;
+	}
+	.categories .section-description { 
+	  margin-bottom: 1rem;
+	}
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <ul class="navbar-list">
+        <li class="navbar-item"><a class="navbar-home" href="../"><img class="navbar-home" style="margin-bottom:-5px;margin-right:12px" width="24" height="24" src="../images/favicon.png"></img>Streamline</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="../retusjering">Retusjering</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="../kontakt">Kontakt</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="../oss">Om Oss</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="../portfolio">Portfolio</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="section values">
+    <div class="container">
+	    <div class="row">
+	      <div class="one-half column" style="margin-top: 0px">
+	        <h1>Streamline</h1>
+	        <h5>A company made to fulfill your technical desires</h5>
+	      </div>
+	    </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+	    <div class="row">
+		  <p>Lorem ipsum dolor sit amet, duo ea ipsum dolorem, labores placerat his in. Sed natum doctus ne, vim te duis wisi oportere, pri in erat soluta. Sea adhuc phaedrum ex, porro interesset dissentiunt sit ei. At exerci vulputate est, scaevola elaboraret eloquentiam sea no, eripuit appetere honestatis no vis. Eu eos purto falli ornatus. In praesent disputando ius.</p>
+		  
+<p>Te has accumsan ponderum evertitur, ut quo option consectetuer, postea phaedrum vel at. Oratio legimus sea no, pro ei nobis iuvaret, at prompta dignissim vis. Melius graecis ad sea. At delicata consulatu moderatius ius, ut odio scripserit mea. Omnesque vituperata ut mea, scaevola insolens eum in.</p>
+
+<p>Ex lorem nonumes cum. Sea ei euismod abhorreant appellantur, nec tota volutpat splendide et. Ridens causae pertinax at qui, labores deleniti te nam, et soleat sapientem nec. Putent labitur et per, delenit suavitate qui at.</p>
+
+<p>Tempor habemus id per, duo forensibus adversarium ea. Sint facilisis te quo. Mea ex quando mediocrem, iuvaret eloquentiam mea et. Case vide essent est in, has evertitur persecuti an. An sit intellegat delicatissimi.</p>
+
+<p>No ius habemus intellegebat definitionem. An etiam intellegat sed. No simul doctus cum. Veniam commune quo ad, has cu vero vivendo, utinam democritum inciderint ei cum. Exerci albucius volutpat no sed, eu vitae nominavi honestatis sed. Eam ne mentitum nominavi, oblique tibique accusata cu est.</p>
+
+<p>Ei invidunt atomorum vis. Sea noluisse liberavisse ad, magna torquatos assueverit sea an, et pri debet noster everti. An ius unum cibo quaestio, altera nusquam eligendi ad mei. Minimum dolores referrentur mel cu. Pri ea labitur gloriatur. Mel an erat ullamcorper.</p>
+
+<p>Quem persius ut quo, mei et simul vulputate. Vis ut vivendum suscipiantur, ornatus officiis lucilius pro ex. Duo facilis accusam ea. Id iusto ponderum cum, in elit dolor signiferumque vel, mutat repudiare ad est. Te liber munere appareat cum. Vim consul impedit in.</p>
+
+<p>No sint nihil scripta mei. Est ut intellegam instructior, id ius soluta accumsan mnesarchum. Nam no viderer reprimique. Aperiri instructior mel ex, pri augue definitiones ut.</p>
+
+<p>Ea quo tacimates neglegentur, tollit graece democritum ne ius. Quo ea invenire urbanitas mnesarchum, ei qui velit appetere. Est et viderer virtute, duo id habemus eloquentiam. Sea intellegat consetetur percipitur te, sea vero omnes suscipit ne, porro verterem reformidans nam ex. Eam eu civibus omittantur, at adhuc oporteat neglegentur nec.</p>
+
+<p>Cu per numquam feugiat, quo adhuc alienum assueverit te. Odio eius persius has at, ius veri etiam id. At eros quidam eum, sea ex unum sanctus, cetero phaedrum nec in. Sed quot mutat dissentiet cu. Mea et malis dissentiet, primis numquam eu mel.</p>
+	    </div>
+    </div>
+  </div>
+</body>
+</html>
