@@ -184,3 +184,12 @@
   width: 100%;
   height: auto;
 }
+
+.footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 5em;
+    margin-top: 0em;
+    background-color: #222;
+}
