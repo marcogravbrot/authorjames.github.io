@@ -137,11 +137,10 @@
 }
 
 .values {
-  background-image: url('../images/background-img.png');
+  background-image: url('../images/values-bg.jpg');
   background-size: cover;
   color: #fff;
   padding-bottom: 5rem;
-  background-position: 0px 35%;
 }
 .value-multiplier {
   margin-bottom: .5rem;
@@ -193,20 +192,4 @@
     height: 5em;
     margin-top: 0em;
     background-color: #222;
-}
-
-html {
-  height: 100%;
-}
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.content {
-  flex: 1;
-}
-
-red {
-  color: #c95050;
 }
