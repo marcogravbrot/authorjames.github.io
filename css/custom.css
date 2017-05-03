@@ -141,7 +141,9 @@
     background-image: url("../images/values-bg2.jpg");
 
     /* Set a specific height */
-    height: 250px; 
+    height: 250px;
+    color: #fff;
+    padding-bottom: 5rem;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
