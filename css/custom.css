@@ -138,12 +138,13 @@
 
 .parallax { 
     /* The image used */
-    background-image: url("../images/values-bg2.jpg");
+    background-image: url("../images/values-bg.jpg");
+    
+    margin-top: -20px;
 
     /* Set a specific height */
-    height: 250px;
+    height: 285px;
     color: #fff;
-    padding-bottom: 5rem;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -153,7 +154,7 @@
 } 
     
 .values {
-  background-image: url('../images/values-bg2.jpg');
+  background-image: url('../images/values-bg.jpg');
   background-size: cover;
   color: #fff;
   padding-bottom: 5rem;
@@ -225,5 +226,29 @@ body {
 
 red {
   color: #c95050;
+}
+    
+/* This is for the popup warnings 
+    */
+    
+.fragment {
+    font-size:1.7rem;
+    padding-top:10px;
+    margin-bottom:-20px;
+    color:#fff;
+    background-color:#d64444;
+    height:60px;
+    text-align:center;
+    cursor: pointer;
+}
+
+#close {
+    color:#fff;
+    font-size:1.7rem;
+    float:center;
+    display:inline-block;
+    padding:2px 2px;
+    padding-right: 15px;
+    
 }
     
