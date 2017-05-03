@@ -138,7 +138,7 @@
 
 .parallax { 
     /* The image used */
-    background-image: url("../images/option2.jpg");
+    background-image: url("../images/values-bg2.jpg");
 
     /* Set a specific height */
     height: 250px; 
@@ -151,7 +151,7 @@
 } 
     
 .values {
-  background-image: url('../images/values-bg.jpg');
+  background-image: url('../images/values-bg2.jpg');
   background-size: cover;
   color: #fff;
   padding-bottom: 5rem;
