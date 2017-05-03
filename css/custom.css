@@ -136,6 +136,20 @@
     border: 1px solid rgb(220, 220, 220);
 }
 
+.parallax { 
+    /* The image used */
+    background-image: url("../images/option2.jpg");
+
+    /* Set a specific height */
+    height: 250px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+    
 .values {
   background-image: url('../images/values-bg.jpg');
   background-size: cover;
@@ -210,3 +224,4 @@ body {
 red {
   color: #c95050;
 }
+    
