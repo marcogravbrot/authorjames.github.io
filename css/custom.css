@@ -241,6 +241,7 @@ red {
     height:60px;
     text-align:center;
     cursor: pointer;
+    position: fixed;
 }
 
 #close {
