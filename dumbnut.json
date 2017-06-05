@@ -11,6 +11,54 @@
             "firstResponse": "STUPID",
             "secondResponse": "STUPID",
             "correctResponse": 1
+        },
+        "3": {
+            "question": "Is Donald Trump a nigger?",
+            "firstResponse": "YES",
+            "secondResponse": "NO",
+            "correctResponse": 1
+        },
+        "4": {
+            "question": "Is Kanye West a completely validated genius or just a plain stupid individual?",
+            "firstResponse": "STUPID",
+            "secondResponse": "STUPID",
+            ",correctResponse": 1
+        },
+        "5": {
+            "question": "Is Donald Trump a nigger?",
+            "firstResponse": "YES",
+            "secondResponse": "NO",
+            "correctResponse": 1
+        },
+        "6": {
+            "question": "Is Kanye West a completely validated genius or just a plain stupid individual?",
+            "firstResponse": "STUPID",
+            "secondResponse": "STUPID",
+            "correctResponse": 1
+        },
+        "7": {
+            "question": "Is Donald Trump a nigger?",
+            "firstResponse": "YES",
+            "secondResponse": "NO",
+            "correctResponse": 1
+        },
+        "8": {
+            "question": "Is Kanye West a completely validated genius or just a plain stupid individual?",
+            "firstResponse": "STUPID",
+            "secondResponse": "STUPID",
+            "correctResponse": 1
+        },
+        "9": {
+            "question": "Is Donald Trump a nigger?",
+            "firstResponse": "YES",
+            "secondResponse": "NO",
+            "correctResponse": 1
+        },
+        "10": {
+            "question": "Is Kanye West a completely validated genius or just a plain stupid individual?",
+            "firstResponse": "STUPID",
+            "secondResponse": "STUPID",
+            "correctResponse": 1
         }
     }
 }
