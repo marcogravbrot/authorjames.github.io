@@ -22,7 +22,7 @@
             "question": "Is Kanye West a completely validated genius or just a plain stupid individual?",
             "firstResponse": "STUPID",
             "secondResponse": "STUPID",
-            ",correctResponse": 1
+            "correctResponse": 1
         },
         "5": {
             "question": "Is Donald Trump a nigger?",
