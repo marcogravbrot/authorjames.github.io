@@ -26,7 +26,7 @@
         },
         "5": {
             "question": "Adults have fewer bones than babies do",
-            "firstResponse": "TRUE"
+            "firstResponse": "TRUE",
             "secondResponse": "FALSE",
             "correctResponse": 1
         },
