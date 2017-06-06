@@ -1,63 +1,63 @@
 {
     "questions": {
         "1": {
-            "question": "Is Donald Trump a nigger?",
-            "firstResponse": "YES",
-            "secondResponse": "NO",
-            "correctResponse": 1
+            "question": "Lightning never strikes in the same place twice,
+            "firstResponse": "TRUE",
+            "secondResponse": "FALSE",
+            "correctResponse": 2
         },
         "2": {
-            "question": "Is Kanye West a completely validated genius or just a plain stupid individual?",
-            "firstResponse": "STUPID",
-            "secondResponse": "STUPID",
+            "question": "If you cry in space the tears just stick to your face",
+            "firstResponse": "TRUE",
+            "secondResponse": "FALSE",
             "correctResponse": 1
         },
         "3": {
-            "question": "Is Donald Trump a nigger?",
-            "firstResponse": "YES",
-            "secondResponse": "NO",
-            "correctResponse": 1
+            "question": "If you cut an earthworm in half, both halves can regrow their body",
+            "firstResponse": "TRUE",
+            "secondResponse": "FALSE",
+            "correctResponse": 2
         },
         "4": {
-            "question": "Is Kanye West a completely validated genius or just a plain stupid individual?",
-            "firstResponse": "STUPID",
-            "secondResponse": "STUPID",
+            "question": "Humans can distinguish between over a trillion different smells",
+            "firstResponse": "TRUE",
+            "secondResponse": "FALSE",
             "correctResponse": 1
         },
         "5": {
-            "question": "Is Donald Trump a nigger?",
-            "firstResponse": "YES",
-            "secondResponse": "NO",
+            "question": "Adults have fewer bones than babies do",
+            "firstResponse": "TRUE"
+            "secondResponse": "FALSE",
             "correctResponse": 1
         },
         "6": {
-            "question": "Is Kanye West a completely validated genius or just a plain stupid individual?",
-            "firstResponse": "STUPID",
-            "secondResponse": "STUPID",
-            "correctResponse": 1
+            "question": "Napoleon Bonaparte was extremely short",
+            "firstResponse": "TRUE",
+            "secondResponse": "FALSE",
+            "correctResponse": 2
         },
         "7": {
-            "question": "Is Donald Trump a nigger?",
-            "firstResponse": "YES",
-            "secondResponse": "NO",
-            "correctResponse": 1
+            "question": "Goldfish only have a memory of three seconds",
+            "firstResponse": "TRUE",
+            "secondResponse": "FALSE",
+            "correctResponse": 2
         },
         "8": {
-            "question": "Is Kanye West a completely validated genius or just a plain stupid individual?",
-            "firstResponse": "STUPID",
-            "secondResponse": "STUPID",
+            "question": "There are more cells of bacteria in your body than there are human cells",
+            "firstResponse": "TRUE",
+            "secondResponse": "FALSE",
             "correctResponse": 1
         },
         "9": {
-            "question": "Is Donald Trump a nigger?",
-            "firstResponse": "YES",
-            "secondResponse": "NO",
-            "correctResponse": 1
+            "question": "Your fingernails and hair keep growing after you die",
+            "firstResponse": "TRUE",
+            "secondResponse": "FALSE",
+            "correctResponse": 2
         },
         "10": {
-            "question": "Is Kanye West a completely validated genius or just a plain stupid individual?",
-            "firstResponse": "STUPID",
-            "secondResponse": "STUPID",
+            "question": "Birds are dinosaurs",
+            "firstResponse": "TRUE",
+            "secondResponse": "FALSE",
             "correctResponse": 1
         }
     }
