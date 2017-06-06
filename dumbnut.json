@@ -1,7 +1,7 @@
 {
     "questions": {
         "1": {
-            "question": "Lightning never strikes in the same place twice,
+            "question": "Lightning never strikes in the same place twice",
             "firstResponse": "TRUE",
             "secondResponse": "FALSE",
             "correctResponse": 2
