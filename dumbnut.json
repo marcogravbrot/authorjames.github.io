@@ -59,18 +59,6 @@
             "firstResponse":"TRUE",
             "secondResponse":"FALSE",
             "correctResponse":1
-        },
-        "11":{
-            "question":"Oliver is noob",
-            "firstResponse":"TRUE",
-            "secondResponse":"FALSE",
-            "correctResponse":1
-        },
-        "12":{
-            "question":"Rolf is a god",
-            "firstResponse":"Even tho im a man of god",
-            "secondResponse":"Kayne er gud",
-            "correctResponse":1
         }
     }
 }
