@@ -1,0 +1,18 @@
+body {
+  background-color: #ffffff}
+.content {
+  display: flex;
+  margin-top: 11%;
+ font-family: "Arial Black", Gadget, sans-serif;
+  color: #000000}
+#container {
+  display: flex;
+  justify-content:center
+}
+
+.info {
+  font-size: 80px; color: #39683c
+}
+.number {
+ opacity: 0.8; font-size: 200px;
+}
