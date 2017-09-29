@@ -91,6 +91,14 @@
 			  return f[n] = factorial(n-1) * n;
 			}
 
+			function nPr(n, r) {
+				return factorial(n)/factorial(n-r)
+			}
+
+			function nCr(n, r) {
+				return factorial(n)/(factorial(r)*factorial(n-r))
+			}
+
 			return eval(expression);
 		}
 
