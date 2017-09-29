@@ -74,6 +74,10 @@
 		var list = document.getElementById("list");
 		var amount = 0;
 
+		window.onload = function() {
+			input.focus();
+		}
+
 		function calculate(expression) {
 			Object.getOwnPropertyNames(Math).filter(function (p) {
 			    if (typeof Math[p] === 'function') {
@@ -90,6 +94,8 @@
 			    return f[n];
 			  return f[n] = factorial(n-1) * n;
 			}
+
+			lg = log10
 
 			function nPr(n, r) {
 				return factorial(n)/factorial(n-r)
