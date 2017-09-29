@@ -79,6 +79,8 @@
 		}
 
 		function calculate(expression) {
+			expression = String(expression)
+
 			Object.getOwnPropertyNames(Math).filter(function (p) {
 			    if (typeof Math[p] === 'function') {
 			    	var str = p + " = Math." + p
@@ -105,6 +107,8 @@
 				return factorial(n)/(factorial(r)*factorial(n-r))
 			}
 
+			expression = expression.replace("^", "**")
+
 			return eval(expression);
 		}
 
@@ -123,8 +127,6 @@
 				var ret = calculate(input.value);
 
 				list.innerHTML = String(ret);
-
-				input.value = "";
 			}
 		}
 	</script>
