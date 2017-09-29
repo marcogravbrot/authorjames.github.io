@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulate.me</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+
+	<style>
+		* {
+			padding: none;
+			margin: none;
+		}
+
+		*:focus {
+		    outline: none;
+		}
+
+		body {
+			background-color: rgb(253, 253, 253);
+			color: rgb(60, 60, 60);
+			font-family: 'Source Code Pro', monospace;
+		}
+
+		input {
+			overflow: none;
+			background-color: rgb(245, 245, 245);
+			width: 100%;
+			height: 2em;
+			bottom: 0;
+			position: absolute;
+
+			font-family: 'Source Code Pro', monospace;
+			font-size: 2.5em;
+
+			vertical-align: middle;
+
+			border: none;
+			border-radius: 0.5em;
+			padding-left: 15px;
+		}
+
+		.center {
+	        width: 80vw;
+	        height: 600px;
+
+	        position:absolute; /*it can be fixed too*/
+	        left:0; right:0;
+	        top:0; bottom:0;
+	        margin:auto;
+
+	        /*this to solve "the content will not be cut when the window is smaller than the content": */
+	        max-width:100%;
+	        max-height:100%;
+	        overflow:none;
+		}
+
+		#list {
+			width: 100%;
+			height: 65%;
+			font-size: 5em;
+		}
+	</style>
+</head>
+<body>
+	<div class="center">
+		<h1>Kalkulate.me</h1>
+		<p>A blessed calculator from heaven</p>
+		<div id="list"></div>
+		<input id="input" onkeypress="keyPress(event)" autocomplete="off"></input>
+	</div>
+
+	<script>
+		var input = document.getElementById("input");
+		var list = document.getElementById("list");
+		var amount = 0;
+
+		function calculate(expression) {
+			Object.getOwnPropertyNames(Math).filter(function (p) {
+			    if (typeof Math[p] === 'function') {
+			    	var str = p + " = Math." + p
+			    	eval(str);
+			    }
+			})
+
+			return eval(expression);
+		}
+
+		function keyPress(event) {
+			if (event.keyCode == 13) {
+				/*var element = document.createElement("p").appendChild(document.createTextNode(input.value))
+				list.appendChild(element);
+				list.appendChild(document.createElement("br"))
+
+				if (amount == 5) {
+					list.removeChild(list.firstChild);
+				} else {
+					amount++;
+				}*/
+
+				var ret = calculate(input.value);
+
+				list.innerHTML = String(ret);
+
+				input.value = "";
+			}
+		}
+	</script>
+</body>
+</html>
