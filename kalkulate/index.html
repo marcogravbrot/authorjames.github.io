@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Kalkulate.me</title>
+	<title>Kalkulater</title>
 	
 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 
@@ -54,6 +54,10 @@
 	        overflow:none;
 		}
 
+		h1 {
+			font-size: 3em;
+		}
+
 		#list {
 			width: 100%;
 			height: 65%;
@@ -63,8 +67,10 @@
 </head>
 <body>
 	<div class="center">
-		<h1>Kalkulate.me</h1>
-		<p>A blessed calculator from heaven</p>
+		<h1>Kalkulater</h1>
+		<p>En fin kalkulator lagd av Marco Polo til hjelpe for R1 mattematikk løsning</p>
+		<p>Nyttige funksjoner: <strong>nCr(n, r), nPr(n, r), fakultet(n), lg(n), interval(uttryk, oppdateringer i ms), clear()</strong></p>
+		<p>Andre funksjoner: <strong>sin(n), cos(n), tan(n), sqrt(n), floor(n), acos(n), abs(n)</strong></p>
 		<div id="list"></div>
 		<input id="input" onkeypress="keyPress(event)" autocomplete="off"></input>
 	</div>
@@ -78,36 +84,79 @@
 			input.focus();
 		}
 
+		Object.getOwnPropertyNames(Math).filter(function (p) {
+		    if (typeof Math[p] === 'function') {
+		    	var str = p + " = Math." + p
+		    	eval(str);
+		    }
+		})
+		
+		var f = [];
+		function factorial (n) {
+		  if (n == 0 || n == 1)
+		    return 1;
+		  if (f[n] > 0)
+		    return f[n];
+		  return f[n] = factorial(n-1) * n;
+		}
+
+		fakultet = factorial
+		lg = log10
+		pi = Math.PI
+		PI = Math.PI
+
+		tid = 0
+		setInterval(function(){
+			tid = tid + 0.01
+		}, 10)
+
+		function nPr(n, r) {
+			return factorial(n)/factorial(n-r)
+		}
+
+		function nCr(n, r) {
+			return factorial(n)/(factorial(r)*factorial(n-r))
+		}
+
+		var int
+		var t_int
+
+		function clear() {
+			if (typeof int !== "undefined") {
+				clearInterval(int);
+			}
+
+			if (typeof t_int !== "undefined") {
+				clearTimeout(t_int);
+			}
+
+			list.innerHTML = ""
+		}
+
+		function interval(str, ms, sec) {
+			if (typeof int !== "undefined") {
+				clearInterval(int);
+			}
+
+			if (typeof t_int !== "undefined") {
+				clearTimeout(t_int);
+			}
+
+			int = setInterval(function() {
+				list.innerHTML = String(calculate(str))
+			}, ms)
+
+			if (sec) {
+				t_int = setTimeout(function() {
+					clearInterval(int)
+				}, sec*1000)
+			}
+		}
+
 		function calculate(expression) {
 			expression = String(expression)
-
-			Object.getOwnPropertyNames(Math).filter(function (p) {
-			    if (typeof Math[p] === 'function') {
-			    	var str = p + " = Math." + p
-			    	eval(str);
-			    }
-			})
-			
-			var f = [];
-			function factorial (n) {
-			  if (n == 0 || n == 1)
-			    return 1;
-			  if (f[n] > 0)
-			    return f[n];
-			  return f[n] = factorial(n-1) * n;
-			}
-
-			lg = log10
-
-			function nPr(n, r) {
-				return factorial(n)/factorial(n-r)
-			}
-
-			function nCr(n, r) {
-				return factorial(n)/(factorial(r)*factorial(n-r))
-			}
-
 			expression = expression.replace("^", "**")
+			expression = expression.replace("undefined", "")
 
 			return eval(expression);
 		}
@@ -123,6 +172,11 @@
 				} else {
 					amount++;
 				}*/
+
+				if (input.value == "") {
+					list.innerHTML = "";
+					return;
+				}
 
 				var ret = calculate(input.value);
 
