@@ -69,7 +69,7 @@
 	<div class="center">
 		<h1>Kalkulater</h1>
 		<p>En fin kalkulator lagd av Marco Polo til hjelpe for R1 mattematikk løsning</p>
-		<p>Nyttige funksjoner: <strong>nCr(n, r), nPr(n, r), fakultet(n), lg(n), interval(uttryk, oppdateringer i ms), clear()</strong></p>
+		<p>Nyttige funksjoner: <strong>nCr(n, r), nPr(n, r), fakultet(n), lg(n), interval(uttryk), clear()</strong></p>
 		<p>Andre funksjoner: <strong>sin(n), cos(n), tan(n), sqrt(n), floor(n), acos(n), abs(n)</strong></p>
 		<div id="list"></div>
 		<input id="input" onkeypress="keyPress(event)" autocomplete="off"></input>
@@ -144,13 +144,21 @@
 
 			int = setInterval(function() {
 				list.innerHTML = String(calculate(str))
-			}, ms)
+			}, ms || 10)
 
 			if (sec) {
 				t_int = setTimeout(function() {
 					clearInterval(int)
 				}, sec*1000)
 			}
+		}
+
+		function bakgrunn(css) {
+			document.body.style.backgroundColor = css || "white";
+		}
+
+		function tekst(css) {
+			document.body.style.color = css || "black";
 		}
 
 		function calculate(expression) {
