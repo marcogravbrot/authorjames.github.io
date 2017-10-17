@@ -95,15 +95,18 @@
 		}
 		
 		function median() {
-		    values = Array.from(arguments);
-			values.sort( function(a,b) {return a - b;} );
+			values = Array.from(arguments);
+			values.sort((a,b) => {
+				return a - b;
+			});
 
-		    var half = Math.floor(values.length/2);
+			var half = Math.floor(values.length/2);
 
-		    if(values.length % 2)
-			return values[half];
-		    else
-			return (values[half-1] + values[half]) / 2.0;
+			if (values.length % 2) {
+				return values[half];
+			} else {
+				return (values[half-1] + values[half]) / 2;
+			}
 		}
 		
 		function gjennomsnitt() {
@@ -224,6 +227,8 @@
 				var ret = calculate(input.value);
 				
 				ans = ret;
+				
+				console.log("Ans: " + ans)
 
 				list.innerHTML = String(ret);
 			}
