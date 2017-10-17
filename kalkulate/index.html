@@ -93,6 +93,18 @@
 		function nCr(n, r) {
 			return math.factorial(n)/(math.factorial(r)*math.factorial(n-r))
 		}
+		
+		function median() {
+		    values = Array.from(arguments);
+			values.sort( function(a,b) {return a - b;} );
+
+		    var half = Math.floor(values.length/2);
+
+		    if(values.length % 2)
+			return values[half];
+		    else
+			return (values[half-1] + values[half]) / 2.0;
+		}
 
 		var int
 		var t_int
@@ -147,6 +159,7 @@
 		parser.set("interval", interval)
 		parser.set("clear", clear)
 		parser.set("ans", ans)
+		parser.set("median", median)
 
 		parser.scope.tid = 0
 		setInterval(function(){
