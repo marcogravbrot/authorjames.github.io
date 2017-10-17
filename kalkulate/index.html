@@ -80,6 +80,7 @@
 		var input = document.getElementById("input");
 		var list = document.getElementById("list");
 		var amount = 0;
+		var ans;
 
 		window.onload = function() {
 			input.focus();
@@ -145,6 +146,7 @@
 		parser.set("nPr", nPr)
 		parser.set("interval", interval)
 		parser.set("clear", clear)
+		parser.set("ans", ans)
 
 		parser.scope.tid = 0
 		setInterval(function(){
@@ -195,6 +197,8 @@
 				}
 
 				var ret = calculate(input.value);
+				
+				ans = ret;
 
 				list.innerHTML = String(ret);
 			}
