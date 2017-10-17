@@ -105,6 +105,17 @@
 		    else
 			return (values[half-1] + values[half]) / 2.0;
 		}
+		
+		function gjennomsnitt() {
+			values = Array.from(arguments);
+			var total = 0;
+			
+			for (var i = 0; i < values.length; i++) {
+				total += values[i]	
+			}
+			
+			return (total/values.length);
+		}
 
 		var int
 		var t_int
