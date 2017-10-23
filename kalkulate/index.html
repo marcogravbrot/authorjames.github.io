@@ -119,6 +119,16 @@
 			
 			return (total/values.length);
 		}
+		
+		function sorter() {
+			var tall = Array.from(arguments);
+
+			tall.sort(function(a, b) {
+				return a-b
+		    	})
+
+			return tall.join(", ");
+		}
 
 		var int
 		var t_int
@@ -172,9 +182,9 @@
 		parser.set("nPr", nPr)
 		parser.set("interval", interval)
 		parser.set("clear", clear)
-		parser.set("ans", ans)
 		parser.set("median", median)
 		parser.set("gjennomsnitt", gjennomsnitt)
+		parser.set("sorter", sorter)
 
 		parser.scope.tid = 0
 		setInterval(function(){
@@ -228,7 +238,9 @@
 				
 				ans = ret;
 				
-				console.log("Ans: " + ans)
+				parser.set("ans", ans)
+				
+				//console.log("Ans: " + ans)
 
 				list.innerHTML = String(ret);
 			}
