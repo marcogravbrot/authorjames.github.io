@@ -130,6 +130,16 @@
 			return tall.join(", ");
 		}
 
+		function abc(a, b, c) {
+			var to_sqrt = Math.pow(b, 2) - (4*a*c);
+
+			var x1 = (-b+Math.sqrt(to_sqrt))/2*a;
+			var x2 = (-b-Math.sqrt(to_sqrt))/2*a;
+
+			console.log(x1, x2)
+
+		}
+
 		var int
 		var t_int
 
@@ -185,6 +195,7 @@
 		parser.set("median", median)
 		parser.set("gjennomsnitt", gjennomsnitt)
 		parser.set("sorter", sorter)
+		parset.set("abc", abc);
 
 		parser.scope.tid = 0
 		setInterval(function(){
