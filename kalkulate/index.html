@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Kalkulater</title>
+	<title>kalkulator</title>
 	
 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 
@@ -69,8 +69,8 @@
 </head>
 <body>
 	<div class="center">
-		<h1>Kalkulater</h1>
-		<p>En fin kalkulator lagd av Marco Polo til hjelpe for R1 mattematikk løsning</p>
+		<h1>kalkulator</h1>
+		<p>av polo | nCr(n, r) — nPr(n, r) — abc(a, b, c) — median(n1, n2, ...) — gjennomsnitt(n1, n2, ...) — sorter(n1, n2, ...)</p>
 		<div id="list"></div>
 		<input id="input" onkeypress="keyPress(event)" autocomplete="off"></input>
 	</div>
@@ -133,11 +133,43 @@
 		function abc(a, b, c) {
 			var to_sqrt = Math.pow(b, 2) - (4*a*c);
 
-			var x1 = (-b+Math.sqrt(to_sqrt))/2*a;
-			var x2 = (-b-Math.sqrt(to_sqrt))/2*a;
+			if (to_sqrt < 0) {
+				return "Ingen løsning";
+			}
 
-			console.log(x1, x2)
+			var x1 = (-b+Math.sqrt(to_sqrt))/(2*a);
+			var x2 = (-b-Math.sqrt(to_sqrt))/(2*a);
 
+			if (x1 == x2) {
+				var ret = -x1;
+
+				if (ret > 0) {
+					return "(x+" + String(ret) + ")^2";
+				}
+				
+				return "(x-" + String(ret) + ")^2";
+			}
+
+			var ret1 = -x1;
+			var ret2 = -x2;
+
+			if (ret1 > 0) {
+				ret1 = "+" + String(ret1);
+			} else {
+				ret1 = String(ret1);
+			}
+
+			if (ret2 > 0) {
+				ret2 = "+" + String(ret2);
+			} else {
+				ret2 = String(ret2);
+			}
+
+			if (a != 1) {
+				return a+"(x" + ret1 + ")(x" + ret2 + ")";
+			}
+			
+			return "(x" + ret1 + ")(x" + ret2 + ")";
 		}
 
 		var int
@@ -195,7 +227,7 @@
 		parser.set("median", median)
 		parser.set("gjennomsnitt", gjennomsnitt)
 		parser.set("sorter", sorter)
-		parset.set("abc", abc);
+		parser.set("abc", abc);
 
 		parser.scope.tid = 0
 		setInterval(function(){
