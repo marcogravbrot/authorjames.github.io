@@ -24,10 +24,8 @@ let oppdaterGui = (hva) => {
 let nesteSang = (arr, lyd) => {
 	let index = arr.indexOf((lyd.src).match(".io/(.*)")[1]);
 	if (index === arr.length)  {
-		console.log("index = len")
 		index = 0;
 	}else {
-		console.log("inkrementerer index", index);
 		index++;
 	}
 	return index;
@@ -40,11 +38,10 @@ let spill = (arr) =>  {
 	oppdaterGui(lyd.src);
 	return lyd.src;
 }
-  let main = (index) => {
+let main = (index) => {
 	let filer = ["tix_p_project.mp3", "rocket.mp3", "Regulators 2019 - Dr. Disco x J-Dawg Lille Saus.mp3", "Party_Time_Singers_-_Take_Me_Home_Country_Roads_(mp3.pm).mp3", "Cuban Pete.mp3", "Nasheed - Saleel Sawarim [mp3clan].mp3"];
 	return "spiller: " + filer[filer.indexOf(spill(filer))];
-  }
-document.onload = main;
+}
 </script>
 </body>
 </html>
