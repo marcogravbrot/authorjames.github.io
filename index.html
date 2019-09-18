@@ -13,11 +13,20 @@
 	<h1>On est une compagnie technologie qui veut que tu sois heureue, et ça c'est par la raison que voilà tu nous donneras plus d'argent mec mdr</h1>
 	<p>Du får høre musikk. Trykk under for å gå til neste sang.</p>
 	<button onclick="main()">Endre sang </button>
+	<button onclick="pause()">Play/Pause</button>
 	<h1 id="aktivSang"></h1>
  	<audio id="lyd" autoplay src="tix_p_project.mp3">
 		<source type="audio/mpeg">	
 	</audio>
 <script>
+let pause = () => {
+	let lyd = document.getElementById("lyd")
+	if (lyd.paused) {
+		lyd.play()	
+	}else {
+		lyd.play();
+	}
+}
 let oppdaterGui = (hva) => {
 	document.getElementById("aktivSang").innerHTML = "Nå spilles: " + hva;
 }
