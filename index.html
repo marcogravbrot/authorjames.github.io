@@ -32,7 +32,7 @@ let nesteSang = (arr, lyd) => {
 }
 let spill = (arr) =>  {
 	let lyd = document.getElementById("lyd");
-	lyd.src = nesteSang(arr, lyd);
+	lyd.src = arr[nesteSang(arr, lyd)];
 	lyd.load();
 	lyd.play();	
 	oppdaterGui(lyd.src);
