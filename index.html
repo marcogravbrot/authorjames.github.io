@@ -23,7 +23,7 @@ let oppdaterGui = (hva) => {
 }
 let nesteSang = (arr) => {
 	index = arr.indexOf(document.getElemenyById("lyd").src);
-	if (index = arr.length)  {
+	if (index == arr.length)  {
 		index = 0
 	}else {
 		index++
@@ -43,7 +43,6 @@ let spill = (arr) =>  {
 	return "spiller: " + filer[filer.indexOf(spill())];
   }
 document.onload = main;
-document.onclick = main;
 </script>
 </body>
 </html>
