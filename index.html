@@ -22,10 +22,12 @@ let oppdaterGui = (hva) => {
 	document.getElementById("aktivSang").innerHTML = "Nå spilles: " + hva;
 }
 let nesteSang = (arr, lyd) => {
-	let index = arr.indexOf(lyd.src)+1;
-	if (index == arr.length+1)  {
+	let index = arr.indexOf(lyd.src);
+	if (index === arr.length)  {
+		console.log("index = len")
 		index = 0;
 	}else {
+		console.log("inkrementerer index", index);
 		index++;
 	}
 	return index;
