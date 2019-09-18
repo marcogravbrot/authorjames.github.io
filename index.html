@@ -33,8 +33,10 @@ let oppdaterGui = (hva) => {
 let nesteSang = (arr, lyd, regex) => {
 	let index = arr.indexOf(regex);
 	if (index === arr.length)  {
+		console.log("resetter", index)
 		index = 0;
 	}else {
+		console.log("ink", index)
 		index++;
 	}
 	return index;
