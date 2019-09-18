@@ -21,8 +21,8 @@
 let oppdaterGui = (hva) => {
 	document.getElementById("aktivSang").innerHTML = "Nå spilles: " + hva;
 }
-let nesteSang = (arr) => {
-	let index = arr.indexOf(document.getElemenyById("lyd").src);
+let nesteSang = (arr, lyd) => {
+	let index = arr.indexOf(lyd.src);
 	if (index == arr.length)  {
 		index = 0;
 	}else {
@@ -32,7 +32,7 @@ let nesteSang = (arr) => {
 }
 let spill = (arr) =>  {
 	let lyd = document.getElementById("lyd");
-	lyd.src = nesteSang(arr);
+	lyd.src = nesteSang(arr, lyd);
 	lyd.load();
 	lyd.play();	
 	oppdaterGui(lyd.src);
