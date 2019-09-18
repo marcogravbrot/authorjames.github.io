@@ -12,7 +12,7 @@
 <body>
 	<h1>On est une compagnie technologie qui veut que tu sois heureue, et ça c'est par la raison que voilà tu nous donneras plus d'argent mec mdr</h1>
 	<p>Du får høre musikk. Trykk under for å gå til neste sang.</p>
-	<button onclick="main">Endre sang </button>
+	<button onclick="main()">Endre sang </button>
 	<h1 id="aktivSang"></h1>
  	<audio id="lyd" autoplay>
 		<source type="audio/mpeg">	
@@ -40,7 +40,7 @@ let spill = (arr) =>  {
 }
   let main = (index) => {
 	let filer = ["tix_p_project.mp3", "rocket.mp3", "Regulators 2019 - Dr. Disco x J-Dawg Lille Saus.mp3", "Party_Time_Singers_-_Take_Me_Home_Country_Roads_(mp3.pm).mp3", "Cuban Pete.mp3", "Nasheed - Saleel Sawarim [mp3clan].mp3"];
-	return "spiller: " + filer[filer.indexOf(spill())];
+	return "spiller: " + filer[filer.indexOf(spill(filer))];
   }
 document.onload = main;
 </script>
