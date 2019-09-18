@@ -53,7 +53,7 @@ let spill = (arr, regex) =>  {
 let main = (index) => {
 	//"Regulators 2019 - Dr. Disco x J-Dawg Lille Saus.mp3"
 	let filer = ["tix_p_project.mp3", "rocket.mp3", "Party_Time_Singers_-_Take_Me_Home_Country_Roads_(mp3.pm).mp3", "Cuban Pete.mp3", "Nasheed - Saleel Sawarim [mp3clan].mp3"];
-	return "spiller: " + filer[filer.indexOf(spill(filer, (lyd.src).match("(?<=.io\/).*\.mp3$")[0]))];
+	return "spiller: " + filer[filer.indexOf(spill(filer, (lyd.src).match("(?<=\.io\/).*\.mp3$")[0]))];
 }
 </script>
 </body>
