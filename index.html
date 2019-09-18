@@ -11,20 +11,36 @@
 </head>
 <body>
 	<h1>On est une compagnie technologie qui veut que tu sois heureue, et ça c'est par la raison que voilà tu nous donneras plus d'argent mec mdr</h1>
-	<p>Du får høre musikk. Trykk hvor som helst for å gå til neste sang.</p>
- 	<audio id="lyd" controls autoplay>
+	<p>Du får høre musikk. Trykk under for å gå til neste sang.</p>
+	<button onclick="main">Endre sang </button>
+	<h1 id="aktivSang"></h1>
+ 	<audio id="lyd" hidden autoplay>
 		<source type="audio/mpeg">	
 	</audio>
 <script>
-  let main = () => {
-	let filer = ["tix_p_project.mp3", "rocket.mp3", "Regulators 2019 - Dr. Disco x J-Dawg Lille Saus.mp3", "Party_Time_Singers_-_Take_Me_Home_Country_Roads_(mp3.pm).mp3", "Cuban Pete.mp3", "Nasheed - Saleel Sawarim [mp3clan].mp3"];
-   	let lyd = document.getElementById("lyd");
-	let sang = filer[Math.floor(Math.random()*filer.length)];
-	lyd.src = sang;
+let oppdaterGui = (hva) => {
+	document.getElementById("aktivSang").innerHTML = "Nå spilles: " + hva;
+}
+let nesteSang = (arr) => {
+	index = arr.indexOf(document.getElemenyById("lyd").src);
+	if (index = arr.length)  {
+		index = 0
+	}else {
+		index++
+	}
+	return index;
+}
+let spill = (arr) =>  {
+	let lyd = document.getElementById("lyd");
+	lyd.src = nesteSang(arr);
 	lyd.load();
-	lyd.play();
-	
-	return "spiller: " + sang;
+	lyd.play();	
+	oppdaterGui(lyd.src);
+	return lyd.src
+}
+  let main = (index) => {
+	let filer = ["tix_p_project.mp3", "rocket.mp3", "Regulators 2019 - Dr. Disco x J-Dawg Lille Saus.mp3", "Party_Time_Singers_-_Take_Me_Home_Country_Roads_(mp3.pm).mp3", "Cuban Pete.mp3", "Nasheed - Saleel Sawarim [mp3clan].mp3"];
+	return "spiller: " + filer[filer.indexOf(spill())];
   }
 document.onload = main;
 document.onclick = main;
