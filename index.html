@@ -20,10 +20,12 @@
 	let filer = ["tix_p_project.mp3"]//, "rocket.mp3", "Regulators 2019 - Dr. Disco x J-Dawg Lille Saus.mp3", "Party_Time_Singers_-_Take_Me_Home_Country_Roads_(mp3.pm).mp3", "Cuban Pete.mp3", "Nasheed - Saleel Sawarim [mp3clan].mp3"];
    	let lyd = document.getElementById("lyd");
 	let sang = filer[Math.floor(Math.random()*filer.length)];
-	lyd.src = sang
+	lyd.src = sang;
+	lyd.load();
+	lyd.parentElement.load();
 	lyd.parentElement.play();
 	
-	return "spiller" + sang;
+	return "spiller: " + sang;
   }
 document.onload = main;
 document.onclick = main;
