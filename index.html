@@ -30,8 +30,8 @@ let pause = () => {
 let oppdaterGui = (hva) => {
 	document.getElementById("aktivSang").innerHTML = "Nå spilles: " + hva;
 }
-let nesteSang = (arr, lyd) => {
-	let index = arr.indexOf((lyd.src).match(".io/(.*)")[1]);
+let nesteSang = (arr, lyd, regex) => {
+	let index = arr.indexOf(regex);
 	if (index === arr.length)  {
 		index = 0;
 	}else {
@@ -39,18 +39,18 @@ let nesteSang = (arr, lyd) => {
 	}
 	return index;
 }
-let spill = (arr) =>  {
+let spill = (arr, regex) =>  {
 	let lyd = document.getElementById("lyd");
-	lyd.src = arr[nesteSang(arr, lyd)];
+	lyd.src = arr[nesteSang(arr, lyd, regex)];
 	lyd.load();
 	lyd.play();	
-	oppdaterGui(lyd.src);
-	return lyd.src;
+	oppdaterGui(regex);
+	return regex;
 }
 let main = (index) => {
 	//"Regulators 2019 - Dr. Disco x J-Dawg Lille Saus.mp3"
 	let filer = ["tix_p_project.mp3", "rocket.mp3", "Party_Time_Singers_-_Take_Me_Home_Country_Roads_(mp3.pm).mp3", "Cuban Pete.mp3", "Nasheed - Saleel Sawarim [mp3clan].mp3"];
-	return "spiller: " + filer[filer.indexOf(spill(filer))];
+	return "spiller: " + filer[filer.indexOf(spill(filer, (lyd.src).match("(?<=\.io/)(.*)")))];
 }
 </script>
 </body>
