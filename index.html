@@ -11,13 +11,17 @@
 </head>
 <body>
 	<h1>On est une compagnie technologie qui veut que tu sois heureue</h1>
-  <p>Du får kanskje høre musikk, hvis siren pleases</p>
-  <audio id="lyd"></audio>
+	<p>Du får kanskje høre musikk, hvis siren pleases</p>
+ 	<audio id="lyd"></audio>
 <script>
   let main = () => {
-    
+	let filer = ["tix_p_project.mp3", "rocket.mp3"];
+   	let lyd = document.getElementById("lyd");
+	lyd.src = filer[Math.random()*filer.length];
+	lyd.play();
   }
  document.onload = main;
+document.onclick = main;
 </script>
 </body>
 </html>
