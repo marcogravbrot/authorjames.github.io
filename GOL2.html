@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GOL2</title>
+
+	<style type="text/css">
+		background-color: "black";
+	</style>
+</head>
+<body>
+	<canvas style="width:600px; height: 600px;"></canvas>
+<script type="text/javascript">
+	var canvas = document.getElementsByTagName("canvas")[0];
+	var ctx = canvas.getContext("2d");
+
+	canvas.width = window.innerHeight-50;
+	canvas.height = window.innerHeight-50;
+
+	antall = 32;
+	size = canvas.width/32;
+
+	let grid = [];
+
+	let lagGrid = () => {
+		let returArr = [];
+		for (let i = 0; i < antall-1; i++) {
+			for (let j = 0; j < antall-1; j++){
+				//grid.push(new Celle(i, j))
+				//beholder.leggTil(grid[-1])
+				//if (!Math.round(Math.random()*2) {
+				//	beholder.celler[-1].settLevende();
+				//}
+				grid.push({x: i, y: j, alive: (Math.round(Math.random()*100) < 7)});
+
+				/*if (i == 16 && j == 16) {
+					grid.push({x: i, y: j, alive: true})
+				} else {
+					grid.push({x: i, y: j, alive: false})
+				}*/
+			}
+		}
+	}
+
+	let oppdater = () => {
+		grid.forEach(function(cell, index) {
+			if (cell.alive) {
+				var up, down, left, right, topright, topleft, bottomright, bottomleft;
+
+				grid.forEach(function(_cell, index) {
+					if (_cell.y == cell.y-1 && _cell.x == cell.x) {
+						up = _cell;
+					}
+
+					if (_cell.y == cell.y+1 && _cell.x == cell.x) {
+						down = _cell;
+					}
+
+					if (_cell.x == cell.x+1 && _cell.y == cell.y) {
+						right = _cell;
+					}
+
+					if (_cell.x == cell.x-1 && _cell.y == cell.y) {
+						left = _cell;
+					}
+
+
+					// diag
+
+					if (_cell.y == cell.y-1 && _cell.x == cell.x+1) {
+						topright = _cell;
+					}
+
+					if (_cell.y == cell.y-1 && _cell.x == cell.x-1) {
+						topleft = _cell;
+					}
+
+					if (_cell.y == cell.y+1 && _cell.x == cell.x+1) {
+						bottomright = _cell;
+					}
+
+					if (_cell.y == cell.y+1 && _cell.x == cell.x-1) {
+						bottomleft = _cell;
+					}
+				})
+
+				var alive = 0;
+				if (up != undefined) {
+					if (up.alive) {
+						alive++;
+					}
+				}
+
+				if (down != undefined) {
+					if (down.alive) {
+						alive++;
+					}
+				}
+
+				if (left != undefined) {
+					if (left.alive) {
+						alive++;
+					}
+				}
+
+				if (right != undefined) {
+					if (right.alive) {
+						alive++;
+					}
+				}
+
+				if (topright != undefined) {
+					if (topright.alive) {
+						alive++;
+					}
+				}
+
+				if (topleft != undefined) {
+					if (topleft.alive) {
+						alive++;
+					}
+				}
+
+				if (bottomright != undefined) {
+					if (bottomright.alive) {
+						alive++;
+					}
+				}
+
+				if (bottomleft != undefined) {
+					if (bottomleft.alive) {
+						alive++;
+					}
+				}
+
+				if (alive < 2 || alive > 3) {
+					cell.makeAlive = false;
+				}
+			} else {
+				var up, down, left, right, topright, topleft, bottomright, bottomleft;
+
+				grid.forEach(function(_cell, index) {
+					if (_cell.y == cell.y-1 && _cell.x == cell.x) {
+						up = _cell;
+					}
+
+					if (_cell.y == cell.y+1 && _cell.x == cell.x) {
+						down = _cell;
+					}
+
+					if (_cell.x == cell.x+1 && _cell.y == cell.y) {
+						right = _cell;
+					}
+
+					if (_cell.x == cell.x-1 && _cell.y == cell.y) {
+						left = _cell;
+					}
+
+					// diag
+
+					if (_cell.y == cell.y-1 && _cell.x == cell.x+1) {
+						topright = _cell;
+					}
+
+					if (_cell.y == cell.y-1 && _cell.x == cell.x-1) {
+						topleft = _cell;
+					}
+
+					if (_cell.y == cell.y+1 && _cell.x == cell.x+1) {
+						bottomright = _cell;
+					}
+
+					if (_cell.y == cell.y+1 && _cell.x == cell.x-1) {
+						bottomleft = _cell;
+					}
+				})
+
+				var alive = 0;
+				if (up != undefined) {
+					if (up.alive) {
+						alive++;
+					}
+				}
+
+				if (down != undefined) {
+					if (down.alive) {
+						alive++;
+					}
+				}
+
+				if (left != undefined) {
+					if (left.alive) {
+						alive++;
+					}
+				}
+
+				if (right != undefined) {
+					if (right.alive) {
+						alive++;
+					}
+				}
+
+				if (topright != undefined) {
+					if (topright.alive) {
+						alive++;
+					}
+				}
+
+				if (topleft != undefined) {
+					if (topleft.alive) {
+						alive++;
+					}
+				}
+
+				if (bottomright != undefined) {
+					if (bottomright.alive) {
+						alive++;
+					}
+				}
+
+				if (bottomleft != undefined) {
+					if (bottomleft.alive) {
+						alive++;
+					}
+				}
+
+				if (alive >= 3) {
+					cell.makeAlive = true;
+				}
+
+				/*if (alive > 2) {
+					console.log(alive, cell, up, down, left, right, topright, topleft, bottomright, bottomleft);
+					cell.makeAlive = true;
+					console.log("HEI")
+				}*/
+			}
+		})
+	}
+
+	let refresh = () => {
+		ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+		grid.forEach(function(cell, index) {
+			if (cell.makeAlive) {
+				cell.alive = true;
+				cell.makeAlive = undefined;
+			} else if (cell.makeAlive == false) {
+				cell.alive = false;
+				cell.makeAlive = undefined;
+			}
+
+			if (cell.alive) {
+				ctx.fillStyle = "white";
+			} else {
+				ctx.fillStyle = "black";
+			}
+
+			ctx.fillRect(cell.x*size, cell.y*size, size, size);
+		})
+
+		oppdater();
+	}
+
+	setInterval(refresh, 75);
+
+	// Ta senere
+	let click = (x, y) => {
+		grid.forEach(function(cell, index) {
+			cell_x = cell.x*size;
+			cell_y = cell.y*size;
+			click_x = x*size;
+			click_y = y*size;
+
+			//if ((click_x > cell_x) && (click_y <))
+		})
+	}
+
+	lagGrid();
+	refresh();
+</script>
+</body>
+</html>
